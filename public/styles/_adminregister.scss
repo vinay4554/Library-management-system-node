@@ -1,0 +1,42 @@
+.adminregister {
+  width: 40%;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background-color: rgb(224, 215, 215);
+
+  fieldset {
+    padding: 10px 15px;
+    margin: 5px 0;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: rgba(249, 238, 238, 0.8);
+    border: none;
+  }
+  .submit {
+    width: 25%;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: blue;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    &:hover {
+      background-color: rgb(140, 140, 229);
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .adminregister {
+    width: 95%;
+  }
+}

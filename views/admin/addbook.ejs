@@ -1,0 +1,40 @@
+<%- include("../partials/header.ejs") -%>
+<%- include("./previous.ejs")  -%>
+   
+<div class="add-book">
+  <div class="book-header">
+    <h2>Enter Book Details</h2>
+  </div>
+  <form action="/admin/addbook" method="post" class="book-add">
+    <fieldset>
+        <legend>Title</legend>
+        <input type="text" name="title" id="title" />
+    </fieldset>
+    <fieldset>
+        <legend>Author</legend>
+        <input type="text" name="author" id="author" />
+    </fieldset>
+    <fieldset>
+        <legend>Copies</legend>
+        <input type="number" name="copies" min="1" max="500" id="copies" />
+    </fieldset>
+    <fieldset>
+        <legend>Category</legend>
+        <input type="text" name="category" id="category">
+    </fieldset>
+    <fieldset>
+        <legend>Description</legend>
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+    </fieldset>
+    </textarea>
+    <button class="addbutton" type="submit">Add Book</button>
+  </form>
+</div>
+<script>
+  const closebutton = document.getElementById("close-button");
+  const alertmessage = document.getElementById("alert-message");
+  closebutton.addEventListener("click", () => {
+    alertmessage.classList.add("remove-alert");
+  });
+</script>
+<%- include("../partials/footer.ejs") -%>

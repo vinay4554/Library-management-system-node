@@ -1,0 +1,18 @@
+<%- include("../partials/header.ejs") -%> <%- include("./previous.ejs") -%>
+<div class="booksdetails">
+  <% books.forEach(book => { %>
+  <div class="book">
+    <div class="title"><%= book.title %></div>
+    <div class="author">by <i> <%= book.author %> </i></div>
+    <div class="stock">Books Avilable <%= book.stock %></div>
+    <div class="description"><%= book.description.substring(0,150) %></div>
+
+    <% if(book.stock >1) { %>
+    <div class="activities">
+      <a href="/user/issue/<%= book._id %>">issue</a>
+    </div>
+    <% } %>
+  </div>
+  <% }) %>
+</div>
+<%- include("../partials/footer.ejs") -%>

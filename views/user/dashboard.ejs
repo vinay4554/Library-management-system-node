@@ -1,0 +1,30 @@
+<%- include("../partials/header") -%>
+<div class="admindashboard">
+  <div class="adnavbar">
+    <div class="dash">
+      <i class="fa fa-thin fa-align-justify"></i>
+      <a href="/admin/dashboard" id="dash">Dashboard</a>
+    </div>
+    <div class="right">
+      <div class="icon"><%= userdata.username.charAt(0) %></div>
+      <div class="username"><%= userdata.username %></div>
+      <div class="logout">
+        <a href="/user/logout">Logout</a>
+      </div>
+    </div>
+  </div>
+  <%- include("./useractivities.ejs") -%>
+</div>
+
+<script>
+  function showelement() {
+    elem1.classList.toggle("addclass");
+    elem1.classList.toggle("hide");
+  }
+  const elem = document.getElementsByClassName("fa-thin")[0];
+  const elem1 = document.getElementsByClassName("adminactivities")[0];
+  const elem2 = document.getElementsByClassName("clear")[0];
+  elem.onclick = showelement;
+  elem2.onclick = showelement;
+</script>
+<%- include("../partials/footer") -%>

@@ -1,0 +1,113 @@
+.admindashboard {
+  .adnavbar {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    padding: 10px 0;
+    justify-content: space-between;
+    background-color: aqua;
+    color: white;
+    font-size: 25px;
+  }
+  .dash {
+    #dash {
+      margin-left: 40px;
+    }
+    .fa {
+      cursor: pointer;
+      margin-left: 15px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .right {
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+      border-radius: 100%;
+      padding: 5px 10px;
+      background-color: blue;
+    }
+    .username {
+      padding-top: 5px;
+      margin-left: 20px;
+    }
+    .logout {
+      padding-top: 5px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  .hide {
+    transform: translateX(-102%);
+  }
+  .addclass {
+    transform: translateX(0%);
+  }
+  .adminactivities {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 15%;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    .clear {
+      color: black;
+      position: absolute;
+      right: 15px;
+      top: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .addbook {
+      margin-top: 30px;
+    }
+    div {
+      padding: 10px 0;
+      padding-left: 20px;
+      a {
+        text-decoration: none;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .admindashboard {
+    .adnavbar {
+      font-size: 20px;
+    }
+    .right {
+      .username {
+        display: none;
+      }
+      .icon {
+        padding: 2px 5px;
+      }
+      .logout {
+        padding-top: 0;
+        margin-right: 10px;
+      }
+    }
+    .dash {
+      #dash {
+        margin-left: 10px;
+      }
+      .fa {
+        margin-left: 10px;
+      }
+    }
+    .adminactivities {
+      width: 60%;
+    }
+  }
+}

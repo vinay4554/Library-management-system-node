@@ -1,0 +1,18 @@
+<%- include("../partials/header.ejs") -%> <%- include("./previous.ejs") -%>
+<div class="users">
+  <% users.map(user => { %>
+  <div class="user">
+    <div class="username"><%= user.username %></div>
+    <div class="email"><%= user.email %></div>
+    <div class="mobile"><%= user.mobile %></div>
+    <div class="mailto">
+      <a href="mailto:<%=user.email %> ">Send email</a>
+    </div>
+  </div>
+  <% }) %>
+</div>
+<% if(users.length ===0) { %>
+<div class="bg">
+  <img src="/images/datanot.jpg" alt="Not found" />
+</div>
+<%} %> <%- include("../partials/footer.ejs") -%>

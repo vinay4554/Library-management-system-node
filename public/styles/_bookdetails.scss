@@ -1,0 +1,117 @@
+.booksdetails {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  margin: 20px auto;
+  justify-content: space-around;
+  gap: 10px;
+  .book {
+    background-color: #fff;
+    color: black;
+    padding: 10px 20px 5px;
+    div {
+      padding: 10px 0;
+    }
+    .description {
+      text-align: justify;
+      a {
+        text-decoration: none;
+      }
+    }
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .activities {
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        width: 20%;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.singlebook {
+  width: 60%;
+  margin: 20px auto;
+  background-color: #fff;
+  color: black;
+  padding: 10px 20px;
+  div {
+    padding: 10px 0;
+  }
+  .description {
+    text-align: justify;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+    }
+  }
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.bg {
+  img {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+  }
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  h2 {
+    position: absolute;
+    top: 20px;
+    left: 36%;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .singlebook {
+    width: 95%;
+  }
+  .booksdetails {
+    grid-template-columns: 98%;
+    .book {
+      .activities {
+        a {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .navbar {
+    width: 90%;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .searchbar {
+    input[type="text"] {
+      width: 60%;
+      border-radius: 10px;
+    }
+    button {
+      width: 20%;
+    }
+  }
+  .bg {
+    img {
+      width: 90%;
+      height: 90%;
+    }
+    h2 {
+      left: 15%;
+    }
+  }
+}

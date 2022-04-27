@@ -1,0 +1,24 @@
+<%- include("../partials/header") -%>
+<%- include("../homenav.ejs") -%>
+<div class="adminlogin">
+  <div class="user-header">
+    <h2>Admin Login</h2>
+  </div>
+  <form action="/admin/login" class="admin-login" method="post">
+    <fieldset>
+        <legend>Username</legend>
+        <input type="text" name="username" id="username" />
+    </fieldset/>
+    <fieldset>
+        <legend>Password</legend>
+        <input type="password" name="password" id="password" />
+    </fieldset>
+    <button class="loginbtn" type="submit">Log In</button>
+  </form>
+  <div class="logins">
+    <a href="/user/login">User Login</a>
+    <a href="/admin/login">Admin Login</a>
+  </div>
+</div>
+
+<%- include("../partials/footer") -%>

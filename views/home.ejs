@@ -1,0 +1,29 @@
+<%- include("./partials/header") -%> <%- include("./navbar.ejs") -%>
+<div class="home">
+  <div class="searchbar">
+    <form action="/search" method="post">
+      <input
+        type="text"
+        name="value"
+        id="value"
+        placeholder="Search by name,category,authory..."
+      />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  <div class="booksdetails">
+    <% books.forEach(book => { %>
+    <div class="book">
+      <div class="title"><%= book.title %></div>
+      <div class="author">by <i> <%= book.author %> </i></div>
+      <div class="stock">Stock <%= book.stock %></div>
+      <div class="description"><%= book.description.substring(0,150) %></div>
+    </div>
+    <% }) %>
+  </div>
+  <% if(books.length ===0) { %>
+  <div class="bg">
+    <img src="/images/datanot.jpg" alt="Not found" />
+  </div>
+  <%} %> <%- include("./partials/footer") -%>
+</div>

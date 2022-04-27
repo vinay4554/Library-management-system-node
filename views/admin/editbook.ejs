@@ -1,0 +1,36 @@
+<%- include("../partials/header.ejs") -%> <%- include("./bookspage.ejs") -%>
+<div class="updatebookdata">
+  <div class="book-header">
+    <h2>Update Book Details</h2>
+  </div>
+  <form action="/admin/edit/<%= book._id %>" class="update-data" method="post">
+    <fieldset>
+      <legend>Title</legend>
+      <input type="text" name="title" id="title" value="<%= book.title %>" />
+    </fieldset>
+    <fieldset>
+      <legend>Author</legend>
+      <input type="text" name="author" id="author" value="<%= book.author %>" />
+    </fieldset>
+    <fieldset>
+      <legend>Category</legend>
+      <input
+        type="text"
+        name="category"
+        id="category"
+        value="<%= book.category %>"
+      />
+    </fieldset>
+    <fieldset>
+      <legend>Description</legend>
+      <textarea
+        name="description"
+        id="description"
+        cols="20"
+        rows="10"
+      ></textarea>
+    </fieldset>
+    <button class="addbutton" type="submit">Update Book</button>
+  </form>
+</div>
+<%- include("../partials/footer.ejs") -%>

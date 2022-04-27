@@ -1,0 +1,26 @@
+<%- include("../partials/header.ejs") -%> <%- include("./previous.ejs") -%>
+<div class="booksdetails">
+  <% books.forEach(book => { %>
+  <div class="book">
+    <div class="title"><%= book.book_info.title %></div>
+    <div class="author">by <i> <%= book.book_info.author %> </i></div>
+    <div class="issuedata">
+      Return Date <%= book.book_info.issueDate.toLocaleDateString() %>
+    </div>
+    <div class="issuedata">
+      Return Date <%= book.book_info.returnDate.toLocaleDateString() %>
+    </div>
+
+    <div class="activities">
+      <a href="/user/return/<%= book.book_info.id %>">Return</a>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+<% if(books.length ===0) { %>
+<div class="bg">
+  <img src="/images/datanot.jpg" alt="Not found" />
+  <h2>Hurray ! no books to Return</h2>
+</div>
+<%} %> <%- include("../partials/footer.ejs") -%>

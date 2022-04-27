@@ -1,0 +1,21 @@
+<%- include("../partials/header.ejs") -%> <%- include("./previous.ejs") -%>
+<div class="profile">
+  <div class="top">
+    <div class="icon"><p><%= profile.username.charAt(0) %></p></div>
+    <div class="details">
+      <div class="username"><%= profile.username %></div>
+      <div class="email"><%= profile.email %></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="joined">Joined Date</div>
+    <div class="joinedat"><%= profile.joined.toLocaleDateString() %></div>
+    <div class="mobile">Mobile No</div>
+    <div class="num"><%= profile.mobile %></div>
+  </div>
+  <div class="edit-profile">
+    <a href="/user/editprofile">Edit Profile</a>
+    <a href="/user/editpassword">Change Password</a>
+  </div>
+</div>
+<%- include("../partials/footer.ejs") -%>

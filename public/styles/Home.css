@@ -1,0 +1,667 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #002153;
+}
+
+.logins a {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.searchbar {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.searchbar input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.searchbar button {
+  width: 10%;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+.searchbar button:hover {
+  background-color: aquamarine;
+}
+
+.isssuetitle {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  margin: 10px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 20px;
+  background-color: rgba(0, 0, 255, 0.6);
+  border-radius: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.navbar .icon a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .nav-links a {
+  color: white;
+}
+
+.adminlogin {
+  width: 40%;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background-color: #e0d7d7;
+}
+
+.adminlogin fieldset {
+  padding: 10px 15px;
+  margin: 5px 0;
+}
+
+.adminlogin input[type="text"],
+.adminlogin input[type="password"] {
+  width: 100%;
+  padding: 15px 10px;
+  margin: 0 5px;
+  border-radius: 10px;
+  background-color: rgba(249, 238, 238, 0.8);
+  border: none;
+}
+
+.adminlogin .loginbtn {
+  width: 25%;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: blue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.adminlogin .loginbtn:hover {
+  background-color: #8c8ce5;
+}
+
+@media only screen and (max-width: 700px) {
+  .adminlogin {
+    width: 90%;
+  }
+}
+
+.adminregister {
+  width: 40%;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background-color: #e0d7d7;
+}
+
+.adminregister fieldset {
+  padding: 10px 15px;
+  margin: 5px 0;
+}
+
+.adminregister input[type="text"],
+.adminregister input[type="password"],
+.adminregister input[type="email"],
+.adminregister input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: rgba(249, 238, 238, 0.8);
+  border: none;
+}
+
+.adminregister .submit {
+  width: 25%;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: blue;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.adminregister .submit:hover {
+  background-color: #8c8ce5;
+}
+
+@media only screen and (max-width: 700px) {
+  .adminregister {
+    width: 95%;
+  }
+}
+
+.admindashboard .adnavbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
+  padding: 10px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: aqua;
+  color: white;
+  font-size: 25px;
+}
+
+.admindashboard .dash #dash {
+  margin-left: 40px;
+}
+
+.admindashboard .dash .fa {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.admindashboard .dash a {
+  text-decoration: none;
+}
+
+.admindashboard .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.admindashboard .right .icon {
+  border-radius: 100%;
+  padding: 5px 10px;
+  background-color: blue;
+}
+
+.admindashboard .right .username {
+  padding-top: 5px;
+  margin-left: 20px;
+}
+
+.admindashboard .right .logout {
+  padding-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.admindashboard .hide {
+  -webkit-transform: translateX(-102%);
+          transform: translateX(-102%);
+}
+
+.admindashboard .addclass {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.admindashboard .adminactivities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  width: 15%;
+  padding-left: 10px;
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.admindashboard .adminactivities .clear {
+  color: black;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.admindashboard .adminactivities .addbook {
+  margin-top: 30px;
+}
+
+.admindashboard .adminactivities div {
+  padding: 10px 0;
+  padding-left: 20px;
+}
+
+.admindashboard .adminactivities div a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .admindashboard .adnavbar {
+    font-size: 20px;
+  }
+  .admindashboard .right .username {
+    display: none;
+  }
+  .admindashboard .right .icon {
+    padding: 2px 5px;
+  }
+  .admindashboard .right .logout {
+    padding-top: 0;
+    margin-right: 10px;
+  }
+  .admindashboard .dash #dash {
+    margin-left: 10px;
+  }
+  .admindashboard .dash .fa {
+    margin-left: 10px;
+  }
+  .admindashboard .adminactivities {
+    width: 60%;
+  }
+}
+
+.add-book,
+.updatebookdata {
+  width: 40%;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.add-book .book-header,
+.updatebookdata .book-header {
+  text-align: center;
+}
+
+.add-book fieldset,
+.updatebookdata fieldset {
+  padding: 10px 15px;
+  margin: 5px 0;
+}
+
+.add-book input[type="text"],
+.add-book input[type="password"],
+.add-book textarea,
+.add-book input[type="number"],
+.updatebookdata input[type="text"],
+.updatebookdata input[type="password"],
+.updatebookdata textarea,
+.updatebookdata input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #e7e2e2;
+  border: none;
+}
+
+.add-book .addbutton,
+.updatebookdata .addbutton {
+  padding: 10px 15px;
+  text-align: center;
+  background-color: blue;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.add-book .addbutton:hover,
+.updatebookdata .addbutton:hover {
+  background-color: #8c8ce5;
+}
+
+.add-book textarea,
+.updatebookdata textarea {
+  height: 60px;
+}
+
+.goback i {
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .add-book,
+  .updatebookdata {
+    width: 90%;
+  }
+  .add-book .addbutton,
+  .updatebookdata .addbutton {
+    padding: 10px 35px;
+  }
+}
+
+.booksdetails {
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  margin: 20px auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 10px;
+}
+
+.booksdetails .book {
+  background-color: #fff;
+  color: black;
+  padding: 10px 20px 5px;
+}
+
+.booksdetails .book div {
+  padding: 10px 0;
+}
+
+.booksdetails .book .description {
+  text-align: justify;
+}
+
+.booksdetails .book .description a {
+  text-decoration: none;
+}
+
+.booksdetails .book .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.booksdetails .book .activities a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 20%;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.singlebook {
+  width: 60%;
+  margin: 20px auto;
+  background-color: #fff;
+  color: black;
+  padding: 10px 20px;
+}
+
+.singlebook div {
+  padding: 10px 0;
+}
+
+.singlebook .description {
+  text-align: justify;
+  font-weight: bold;
+}
+
+.singlebook .description a {
+  text-decoration: none;
+}
+
+.singlebook .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bg {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.bg img {
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+}
+
+.bg h2 {
+  position: absolute;
+  top: 20px;
+  left: 36%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+@media only screen and (max-width: 700px) {
+  .singlebook {
+    width: 95%;
+  }
+  .booksdetails {
+    -ms-grid-columns: 98%;
+        grid-template-columns: 98%;
+  }
+  .booksdetails .book .activities a {
+    width: 30%;
+  }
+  .navbar {
+    width: 90%;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .searchbar input[type="text"] {
+    width: 60%;
+    border-radius: 10px;
+  }
+  .searchbar button {
+    width: 20%;
+  }
+  .bg img {
+    width: 90%;
+    height: 90%;
+  }
+  .bg h2 {
+    left: 15%;
+  }
+}
+
+.profile {
+  width: 50%;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 30px 20px;
+  background-color: #fff;
+  color: black;
+}
+
+.profile .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile .top .icon {
+  background-color: aquamarine;
+  border-radius: 100%;
+  padding: 10px 40px;
+}
+
+.profile .top .icon p {
+  font-size: 25px;
+}
+
+.profile .top .details {
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.profile .top .details div {
+  margin-top: 15px;
+}
+
+.profile .bottom {
+  margin-left: 220px;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.profile .bottom .joined,
+.profile .bottom .mobile {
+  border-bottom: 2px solid #2e2b2b;
+  padding-bottom: 10px;
+}
+
+.profile .bottom div {
+  margin-top: 15px;
+}
+
+.profile .edit-profile {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile .edit-profile a {
+  display: inline-block;
+  padding: 10px;
+  width: 20%;
+  text-align: center;
+  background-color: blue;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 700px) {
+  .profile {
+    width: 95%;
+  }
+  .profile .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile .top .icon {
+    width: 25%;
+    height: 10%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .profile .top .icon p {
+    font-size: 30px;
+    text-align: center;
+    padding: 0;
+  }
+  .profile .top .details {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .profile .bottom {
+    margin-left: 10px;
+  }
+  .profile .edit-profile {
+    text-align: justify;
+  }
+  .profile .edit-profile a {
+    width: 50%;
+    margin: 10px 0;
+  }
+}
+
+.users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px auto;
+  color: black;
+  row-gap: 10px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.users .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 10px;
+  width: 50%;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  background-color: #fff;
+}
+
+.users .user div {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .users {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .users .user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    text-align: justify;
+    font-size: 25px;
+    margin-left: 5px;
+  }
+  .users .user div {
+    margin: 3px 0;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

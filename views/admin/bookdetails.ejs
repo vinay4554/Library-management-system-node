@@ -1,0 +1,22 @@
+<%- include("../partials/header.ejs") -%> <%- include("./previous.ejs") -%>
+<div class="booksdetails">
+  <% books.forEach(book => { %>
+  <div class="book">
+    <div class="title"><%= book.title %></div>
+    <div class="author">by <i> <%= book.author %> </i></div>
+    <div class="description">
+      <%= book.description.substring(0,100) %>
+      <a href="/admin/bookdetail/<%= book._id %> ">See More ....</a>
+    </div>
+    <div class="activities">
+      <a href="/admin/edit/<%= book._id %>">Edit</a>
+      <a href="/admin/delete/<%= book._id %>">Delete</a>
+    </div>
+  </div>
+  <% }) %>
+</div>
+<% if(books.length ===0) { %>
+<div class="bg">
+  <img src="/images/datanot.jpg" alt="Not found" />
+</div>
+<%} %> <%- include("../partials/footer.ejs") -%>

@@ -1,0 +1,32 @@
+<%- include("../partials/header") -%> <%- include("./previous.ejs") -%>
+<div class="adminregister">
+  <div class="adminheader">
+    <h2>Create An Account</h2>
+  </div>
+  <form
+    action="/admin/register"
+    method="post"
+    class="admin-register"
+    autocomplete="off"
+  >
+    <fieldset>
+      <legend>Username</legend>
+      <input type="text" name="username" id="username" />
+    </fieldset>
+    <fieldset>
+      <legend>Email</legend>
+      <input type="email" name="email" id="email" />
+    </fieldset>
+    <fieldset>
+      <legend>Password</legend>
+      <input type="password" name="password" id="password" />
+    </fieldset>
+    <fieldset>
+      <legend>Mobile No</legend>
+      <input type="tel" name="mobile" id="mobile" autocomplete="off" />
+    </fieldset>
+
+    <button class="submit" type="submit">Register</button>
+  </form>
+</div>
+<%- include("../partials/footer") -%>
