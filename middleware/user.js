@@ -4,17 +4,20 @@ import Issue from "../models/issue.js";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
+import flash from "connect-flash";
 
 export const getlogin = (req, res) => {
   if (req.user) {
     res.redirect("dashboard");
   } else {
-    res.render("user/userlogin");
+    const message = req.flash("message");
+    res.render("user/userlogin", { message: message });
   }
 };
 
 export const getregister = (req, res) => {
-  res.render("user/userregister");
+  const message = req.flash("sucess");
+  res.render("user/userregister", { message });
 };
 
 export const dashboard = (req, res) => {
@@ -34,7 +37,8 @@ export const register = async (req, res) => {
   });
   try {
     await user.save();
-    res.render("user/userlogin");
+    req.flash("sucess", "Registration Sucessfull");
+    res.redirect("register");
   } catch (error) {
     res.redirect("/");
   }
@@ -45,11 +49,17 @@ export const login = async (req, res) => {
 
   const userexits = await User.findOne({ username });
 
-  if (!userexits) return res.status(400).send("User not exists");
+  if (!userexits) {
+    req.flash("message", "Username is Incorrect");
+    return res.redirect("back");
+  }
 
   const validpassword = await bcrypt.compare(password, userexits.password);
 
-  if (!validpassword) return res.status(400).send("Invalid Password");
+  if (!validpassword) {
+    req.flash("message", "Password is Incorrect");
+    return res.redirect("back");
+  }
 
   // creating a token
 
@@ -78,7 +88,8 @@ export const logout = (req, res) => {
 export const getissuebook = async (req, res) => {
   try {
     const books = await Book.find({});
-    res.render("user/issuebook", { books: books });
+    const message = req.flash("message");
+    res.render("user/issuebook", { books: books, message: message });
   } catch (error) {
     res.redirect("back");
   }
@@ -116,17 +127,17 @@ export const issuebook = async (req, res) => {
         await user.save();
         await book.save();
 
-        res.redirect("back");
+        req.flash("message", "Book Successfully issued");
       } else {
-        res.send("You Already Took The book Return It");
+        req.flash("message", "Book Already Issued");
       }
     } else {
-      res.send("Return Previous Books to issue");
+      req.flash("message", "Return Issued Books");
     }
   } catch (err) {
-    console.log(err);
     return res.redirect("back");
   }
+  res.redirect("back");
 };
 
 export const getreturnbook = async (req, res) => {
@@ -134,9 +145,9 @@ export const getreturnbook = async (req, res) => {
     const booksdata = await Issue.find({
       "user_id.username": req.user.username,
     });
-    res.render("user/returnbook", { books: booksdata });
+    const message = req.flash("message");
+    res.render("user/returnbook", { books: booksdata, message: message });
   } catch (err) {
-    console.log(err);
     return res.redirect("back");
   }
 };
@@ -160,11 +171,46 @@ export const returnbook = async (req, res) => {
     userinfo.bookIssueInfo.splice(pos, 1);
     await userinfo.save();
 
+    req.flash("message", "Book successfully returned");
     res.redirect("back");
   } catch (err) {
-    console.log(err);
+    req.flash("message", "Book returned Failed");
     return res.redirect("back");
   }
+};
+
+export const geteditpassword = async (req, res) => {
+  const message = req.flash("message");
+  res.render("user/editpassword", { message: message });
+};
+
+export const editpassword = async (req, res) => {
+  const { password1, password2, password3 } = req.body;
+  const user = await User.findOne({ username: req.user.username });
+  const validpassword = await bcrypt.compare(password1, user.password);
+
+  if (!validpassword) {
+    req.flash("message", "Password is Incorrect");
+  }
+
+  if (!(password2 === password3)) {
+    req.flash("message", "Passwords Did not match");
+  }
+
+  const hashedpassword = await bcrypt.hash(password2, 12);
+
+  try {
+    await User.updateOne(
+      { username: user.username },
+      { $set: { password: hashedpassword } }
+    );
+    req.flash("message", "Password Updated successfully");
+  } catch (error) {
+    req.flash("message", "Sorry Something Went Wrong");
+    res.redirect("back");
+  }
+
+  res.redirect("back");
 };
 
 export const profile = async (req, res) => {

@@ -3,10 +3,9 @@
   padding: 20px;
   margin: 40px auto;
   border-radius: 10px;
-  background-color: rgb(224, 215, 215);
+  background-color: #fff;
 
   fieldset {
-    padding: 10px 15px;
     margin: 5px 0;
   }
 
@@ -16,8 +15,17 @@
     padding: 15px 10px;
     margin: 0 5px;
     border-radius: 10px;
-    background-color: rgba(249, 238, 238, 0.8);
     border: none;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    &:hover {
+      border: none;
+      outline: none;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
   }
   .loginbtn {
     width: 25%;

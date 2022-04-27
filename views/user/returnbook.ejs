@@ -1,4 +1,5 @@
-<%- include("../partials/header.ejs") -%> <%- include("./previous.ejs") -%>
+<%- include("../partials/header.ejs") -%> <%- include("./previous.ejs") -%> <%-
+include("../alert.ejs") -%>
 <div class="booksdetails">
   <% books.forEach(book => { %>
   <div class="book">
@@ -23,4 +24,4 @@
   <img src="/images/datanot.jpg" alt="Not found" />
   <h2>Hurray ! no books to Return</h2>
 </div>
-<%} %> <%- include("../partials/footer.ejs") -%>
+<%} %> <%- include("../clear.ejs") -%> <%- include("../partials/footer.ejs") -%>

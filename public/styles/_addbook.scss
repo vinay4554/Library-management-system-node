@@ -10,7 +10,6 @@
   background-color: #fff;
 
   fieldset {
-    padding: 10px 15px;
     margin: 5px 0;
   }
 
@@ -21,9 +20,17 @@
     width: 100%;
     padding: 10px;
     margin: 0 5px;
-
-    background-color: rgb(231, 226, 226);
+    border-radius: 5px;
+    background-color: #f7f7f7;
     border: none;
+    &:hover {
+      border: none;
+      outline: none;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
   }
   .addbutton {
     padding: 10px 15px;

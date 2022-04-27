@@ -1,0 +1,20 @@
+.alert-message {
+  margin: 10px auto 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: green;
+  padding: 0 15px;
+  width: 50%;
+}
+p.close-button {
+  cursor: pointer;
+}
+.remove-alert {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .alert-message {
+    width: 90%;
+  }
+}

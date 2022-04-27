@@ -13,6 +13,8 @@ import {
   profile,
   register,
   returnbook,
+  geteditpassword,
+  editpassword,
 } from "../middleware/user.js";
 
 router.get("/login", autologin, getlogin);
@@ -30,5 +32,10 @@ router.get("/return/:id", verify, returnbook);
 
 // profile
 router.get("/profile", verify, profile);
+
+// edit Details
+
+router.get("/editpassword", verify, geteditpassword);
+router.post("/editpassword", verify, editpassword);
 
 export default router;

@@ -17,6 +17,8 @@ import {
   geteditbook,
   getregister,
   getaddbook,
+  geteditpassword,
+  editpassword,
 } from "../middleware/admin.js";
 
 // admin auth routes
@@ -39,5 +41,9 @@ router.get("/delete/:id", deletebook);
 // getting Admin profile
 router.get("/profile", verify, profile);
 router.get("/userdetails", verify, userdetails);
+
+// edit details
+router.get("/editpassword", verify, geteditpassword);
+router.post("/editpassword", verify, editpassword);
 
 export default router;

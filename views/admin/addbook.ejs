@@ -1,6 +1,6 @@
 <%- include("../partials/header.ejs") -%>
 <%- include("./previous.ejs")  -%>
-   
+<%- include("../alert.ejs") -%>
 <div class="add-book">
   <div class="book-header">
     <h2>Enter Book Details</h2>
@@ -30,11 +30,5 @@
     <button class="addbutton" type="submit">Add Book</button>
   </form>
 </div>
-<script>
-  const closebutton = document.getElementById("close-button");
-  const alertmessage = document.getElementById("alert-message");
-  closebutton.addEventListener("click", () => {
-    alertmessage.classList.add("remove-alert");
-  });
-</script>
+<%- include("../clear.ejs") -%>
 <%- include("../partials/footer.ejs") -%>

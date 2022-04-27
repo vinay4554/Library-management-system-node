@@ -83,11 +83,10 @@ body {
   padding: 20px;
   margin: 40px auto;
   border-radius: 10px;
-  background-color: #e0d7d7;
+  background-color: #fff;
 }
 
 .adminlogin fieldset {
-  padding: 10px 15px;
   margin: 5px 0;
 }
 
@@ -97,8 +96,21 @@ body {
   padding: 15px 10px;
   margin: 0 5px;
   border-radius: 10px;
-  background-color: rgba(249, 238, 238, 0.8);
   border: none;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+.adminlogin input[type="text"]:hover,
+.adminlogin input[type="password"]:hover {
+  border: none;
+  outline: none;
+}
+
+.adminlogin input[type="text"]:focus,
+.adminlogin input[type="password"]:focus {
+  border: none;
+  outline: none;
 }
 
 .adminlogin .loginbtn {
@@ -126,13 +138,12 @@ body {
 .adminregister {
   width: 40%;
   padding: 20px;
-  margin: 40px auto;
+  margin: 30px auto;
   border-radius: 10px;
-  background-color: #e0d7d7;
+  background-color: #fff;
 }
 
 .adminregister fieldset {
-  padding: 10px 15px;
   margin: 5px 0;
 }
 
@@ -143,8 +154,26 @@ body {
   width: 100%;
   padding: 10px;
   margin: 0 5px;
-  background-color: rgba(249, 238, 238, 0.8);
   border: none;
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 5px;
+}
+
+.adminregister input[type="text"]:hover,
+.adminregister input[type="password"]:hover,
+.adminregister input[type="email"]:hover,
+.adminregister input[type="tel"]:hover {
+  border: none;
+  outline: none;
+}
+
+.adminregister input[type="text"]:focus,
+.adminregister input[type="password"]:focus,
+.adminregister input[type="email"]:focus,
+.adminregister input[type="tel"]:focus {
+  border: none;
+  outline: none;
 }
 
 .adminregister .submit {
@@ -318,7 +347,6 @@ body {
 
 .add-book fieldset,
 .updatebookdata fieldset {
-  padding: 10px 15px;
   margin: 5px 0;
 }
 
@@ -333,8 +361,33 @@ body {
   width: 100%;
   padding: 10px;
   margin: 0 5px;
-  background-color: #e7e2e2;
+  border-radius: 5px;
+  background-color: #f7f7f7;
   border: none;
+}
+
+.add-book input[type="text"]:hover,
+.add-book input[type="password"]:hover,
+.add-book textarea:hover,
+.add-book input[type="number"]:hover,
+.updatebookdata input[type="text"]:hover,
+.updatebookdata input[type="password"]:hover,
+.updatebookdata textarea:hover,
+.updatebookdata input[type="number"]:hover {
+  border: none;
+  outline: none;
+}
+
+.add-book input[type="text"]:focus,
+.add-book input[type="password"]:focus,
+.add-book textarea:focus,
+.add-book input[type="number"]:focus,
+.updatebookdata input[type="text"]:focus,
+.updatebookdata input[type="password"]:focus,
+.updatebookdata textarea:focus,
+.updatebookdata input[type="number"]:focus {
+  border: none;
+  outline: none;
 }
 
 .add-book .addbutton,
@@ -662,6 +715,86 @@ body {
   }
   .users .user div {
     margin: 3px 0;
+  }
+}
+
+.editpassword {
+  width: 50%;
+  margin: 20px auto 30px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.editpassword h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.editpassword div {
+  border-bottom: 2px solid black;
+}
+
+.editpassword input[type="password"] {
+  width: 100%;
+  padding: 20px 10px;
+  border: none;
+  font-size: 20px;
+}
+
+.editpassword input[type="password"]:hover {
+  border: none;
+  outline: none;
+}
+
+.editpassword input[type="password"]:focus {
+  border: none;
+  outline: none;
+}
+
+.editpassword button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.editpassword button:hover {
+  background-color: #434040;
+}
+
+@media only screen and (max-width: 700px) {
+  .editpassword {
+    width: 95%;
+  }
+}
+
+.alert-message {
+  margin: 10px auto 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: green;
+  padding: 0 15px;
+  width: 50%;
+}
+
+p.close-button {
+  cursor: pointer;
+}
+
+.remove-alert {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .alert-message {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=Home.css.map */

@@ -2,9 +2,10 @@ import express from "express";
 import bodyparser from "body-parser";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import cookieparser from "cookie-parser";
 import flash from "connect-flash";
 import session from "express-session";
+import cookieParser from "cookie-parser";
+dotenv.config();
 // importing routes
 
 import adminroutes from "./routes/admin.js";
@@ -14,8 +15,16 @@ const app = express();
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(cookieparser());
-dotenv.config();
+app.use(cookieParser("myselfvinaykumar"));
+app.use(
+  session({
+    secret: "myselfvinaykumar",
+    cookie: { maxAge: 60000 },
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+app.use(flash());
 import Book from "./models/book.js";
 
 app.set("view engine", "ejs");
